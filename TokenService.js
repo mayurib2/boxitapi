@@ -61,34 +61,6 @@ async function validateToken(authorizationHeaderValue) {
     // Done - all JWT token claims can now be trusted
     console.log("RETURNING decodedAndVerified ", decodedAndVerified);
     return decodedAndVerified;
-        //
-        // ,
-        // function (err, decodedAndVerified) {
-        //     if (err) {
-        //         console.debug(`Invalid JWT token. jwt.verify() failed: ${err}.`)
-        //         if (err instanceof jwt.TokenExpiredError) {
-        //             return new Error(`Authorization header contains a JWT token that expired at ${err.expiredAt.toISOString()}.`);
-        //         } else {
-        //             return new Error('Authorization header contains an invalid JWT token.'); // don't return detailed info to the caller
-        //         }
-        //         return;
-        //     }
-        //
-        //     // The signature matches so we know the JWT token came from our Cognito instance, now just verify the remaining claims in the token
-        //
-        //
-        //     // Verify the client id matches what we expect. Will be in either the aud or the client_id claim depending on whether it's an id or access token.
-        //     const clientId = (decodedAndVerified.aud);
-        //     if (clientId !== appConfig.clientId) {
-        //         console.debug(`Invalid JWT token. Expected client id to be ${appConfig.clientId} but found ${clientId}.`);
-        //         return new Error('Authorization header contains an invalid JWT token.'); // don't return detailed info to the caller
-        //     }
-        //
-        //     // Done - all JWT token claims can now be trusted
-        //     console.log("RETURNING decodedAndVerified ", decodedAndVerified);
-        //     return decodedAndVerified;
-        // });
-
 }
 
 module.exports = {
