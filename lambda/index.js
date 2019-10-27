@@ -3,8 +3,7 @@ var AWS = require('aws-sdk');
 exports.handler = async (event, context) => {
     AWS.config.update({region: 'us-east-1'});
     AWS.config.update({
-        accessKeyId: 'AKIAI65URDDUIVEWZMHA',
-        secretAccessKey: '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',
+
         region: 'us-east-1'
     });
     console.log("event ",JSON.stringify(event));
