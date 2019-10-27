@@ -5,7 +5,7 @@ const jwkToPem = require('jwk-to-pem');
 const fileService = require('./FileService');
 const tokenService = require('./TokenService');
 const app = express();
-const port = 80;
+const port = 3000;
 
 app.use(bodyParser.json());
 app.use(
