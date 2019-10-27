@@ -6,8 +6,11 @@ const fileService = require('./FileService');
 const tokenService = require('./TokenService');
 const app = express();
 const port = 3000;
+var cors = require('cors')
 var https = require('https')
 var fs = require('fs')
+
+app.use(cors())
 app.use(bodyParser.json());
 app.use(
     bodyParser.urlencoded({
