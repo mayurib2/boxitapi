@@ -28,7 +28,7 @@ app.listen(port, () => {
 //     })
 
 app.get('/', (request, response) => {
-    response.json({info: 'Node.js, Express, and Postgres API'})
+    response.json({info: 'BACKEND API Node.js, Express, and Postgres API'})
 });
 
 app.post('/file_details', (request, response) => {
