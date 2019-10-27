@@ -6,9 +6,8 @@ const fileService = require('./FileService');
 const tokenService = require('./TokenService');
 const app = express();
 const port = 3000;
-var cors = require('cors')
-var https = require('https')
-var fs = require('fs')
+const cors = require('cors')
+
 
 app.use(cors())
 app.use(bodyParser.json());
@@ -21,14 +20,6 @@ app.use(
 app.listen(port, () => {
     console.log(`App running on port ${port}.`)
 });
-
-// https.createServer({
-//     key: fs.readFileSync('server.key'),
-//     cert: fs.readFileSync('server.cert')
-// }, app)
-//     .listen(3000, function () {
-//         console.log('Example app listening on port 3000! Go to https://localhost:3000/')
-//     })
 
 app.get('/', (request, response) => {
     response.json({info: 'BACKEND API Node.js, Express, and Postgres API'})
